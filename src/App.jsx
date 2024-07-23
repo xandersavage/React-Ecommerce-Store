@@ -18,7 +18,10 @@ function App() {
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<HomePage />} />
 			</Route>
-		)
+		),
+		{
+			basename: '/React-Ecommerce-Store/'
+		}
 	);
 
 	return <RouterProvider router={router} />;
