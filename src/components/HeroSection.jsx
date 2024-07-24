@@ -4,7 +4,7 @@ import fashionTwo from '../assets/images/hero-2.jpg';
 const HeroSection = () => {
 	return (
 		<>
-			<div className="hero min-h-screen w-full overflow-hidden prose">
+			<div className="hero min-h-screen w-full prose">
 				<div className="hero-content flex flex-col sm:flex-row lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-16">
 					<img
 						src={fashionTwo}
