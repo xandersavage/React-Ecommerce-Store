@@ -5,7 +5,7 @@ const ClothingCard = ({ id, image, name, price, color }) => {
 		<div
 			className="card glass group rounded-none shadow-xl 
                         relative overflow-hidden cursor-pointer
-						h-96 m-4"
+						h-96 p-1"
 		>
 			<figure className="h-2/3">
 				<img
@@ -16,7 +16,7 @@ const ClothingCard = ({ id, image, name, price, color }) => {
 				/>
 			</figure>
 			<div className="card-body p-1.5 h-1/3">
-				<h4 className="card-title underline text-primary text-md font-robotoMono">
+				<h4 className="card-title underline text-primary text-sm font-robotoMono">
 					{name}
 				</h4>
 				<p className="text-md font-robotoMono bg-neutral p-1 w-24">{color}</p>
