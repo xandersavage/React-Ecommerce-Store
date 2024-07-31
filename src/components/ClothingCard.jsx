@@ -19,7 +19,7 @@ const ClothingCard = ({ id, image, name, price, color }) => {
 				<h4 className="card-title underline text-primary text-sm font-robotoMono">
 					{name}
 				</h4>
-				<p className="text-md font-robotoMono bg-neutral p-1 w-24">{color}</p>
+				<p className="text-sm font-robotoMono bg-neutral p-1 w-2/3">{color}</p>
 				<p className="text-2xl font-teko">${price}</p>
 			</div>
 		</div>
