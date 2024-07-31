@@ -5,7 +5,7 @@ const ClothingCard = ({ id, image, name, price, color }) => {
 		<div
 			className="card glass group rounded-none shadow-xl 
                         relative overflow-hidden cursor-pointer
-						h-96 p-1"
+						h-96"
 		>
 			<figure className="h-2/3">
 				<img
