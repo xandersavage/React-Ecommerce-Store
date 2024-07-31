@@ -4,17 +4,18 @@ const ClothingCard = ({ id, image, name, price, color }) => {
 	return (
 		<div
 			className="card glass group rounded-none shadow-xl 
-                        relative overflow-hidden cursor-pointer m-4"
+                        relative overflow-hidden cursor-pointer
+						h-96 m-4"
 		>
-			<figure>
+			<figure className="h-2/3">
 				<img
 					src={image}
 					alt={name}
-					className="w-full h-48 object-cover transform 
+					className="w-full h-full object-cover transform 
                                 transition duration-300 group-hover:scale-110"
 				/>
 			</figure>
-			<div className="card-body p-1.5">
+			<div className="card-body p-1.5 h-1/3">
 				<h4 className="card-title underline text-primary text-md font-robotoMono">
 					{name}
 				</h4>
