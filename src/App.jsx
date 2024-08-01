@@ -21,8 +21,8 @@ function App() {
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<HomePage />} />
 				<Route path="/about" element={<AboutPage />} />
-				<Route path="/men" element={<MenStorePage />} />
-				<Route path="/women" element={<WomenStorePage />} />
+				<Route path="/men" element={<MenStorePage category="Men" />} />
+				<Route path="/women" element={<WomenStorePage category="Women" />} />
 			</Route>
 		),
 		{

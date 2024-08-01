@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Intro from '../components/Intro';
 
 // Images
@@ -6,7 +7,14 @@ import MenCollectionImage from '../assets/images/collection-1.jpg';
 // Components
 import CardsGroup from '../components/CardsGroup';
 
-const MenStorePage = () => {
+// Men Clothes Data
+import mensClothingItems from '../data/MensClothingItems';
+
+// Women Clothes Data
+import womensClothingItems from '../data/WomensClothingData';
+
+const MenStorePage = ({ category }) => {
+	const data = category === 'Men' ? mensClothingItems : womensClothingItems;
 	return (
 		<>
 			<Intro
@@ -16,7 +24,7 @@ const MenStorePage = () => {
 							fashion pieces. Embrace your uniques style with PawKlan's curated
 							selection"
 			/>
-			<CardsGroup />
+			<CardsGroup clothing={data} />
 		</>
 	);
 };

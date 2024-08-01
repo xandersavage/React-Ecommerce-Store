@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-const ClothingCard = ({ id, image, name, price, color }) => {
+const ClothingCard = ({ id, image, name, price, color, badge }) => {
 	return (
 		<div
 			className="card glass group rounded-none shadow-xl 
@@ -16,10 +16,27 @@ const ClothingCard = ({ id, image, name, price, color }) => {
 				/>
 			</figure>
 			<div className="card-body p-1.5 h-1/3">
-				<h4 className="card-title underline text-primary text-sm font-robotoMono">
-					{name}
-				</h4>
-				<p className="text-sm font-robotoMono bg-neutral p-1 w-2/3">{color}</p>
+				<div className="flex">
+					<h4 className="card-title underline text-primary text-sm font-robotoMono">
+						{name}
+					</h4>
+					{badge && (
+						<div className="badge badge-accent font-teko text-lg ml-2">
+							{badge}
+						</div>
+					)}
+				</div>
+				<div
+					className="badge font-robotoMono font-bold text-neutral badge-secondary"
+					style={{
+						width: '90px',
+						height: '50px',
+						backgroundColor: color,
+						borderRadius: '4px'
+					}}
+				>
+					{color}
+				</div>
 				<p className="text-2xl font-teko">${price}</p>
 			</div>
 		</div>
