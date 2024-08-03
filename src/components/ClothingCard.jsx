@@ -16,12 +16,12 @@ const ClothingCard = ({ id, image, name, price, color, badge }) => {
 				/>
 			</figure>
 			<div className="card-body p-1.5 h-1/3">
-				<div className="flex">
+				<div className="flex items-center justify-between">
 					<h4 className="card-title underline text-primary text-sm font-robotoMono">
 						{name}
 					</h4>
 					{badge && (
-						<div className="badge badge-accent font-teko text-lg ml-2">
+						<div className="badge h-auto ml-1 rounded badge-accent text-center font-teko text-lg">
 							{badge}
 						</div>
 					)}
@@ -29,10 +29,7 @@ const ClothingCard = ({ id, image, name, price, color, badge }) => {
 				<div
 					className="badge font-robotoMono font-bold text-neutral badge-secondary"
 					style={{
-						width: '90px',
-						height: '50px',
-						backgroundColor: color,
-						borderRadius: '4px'
+						backgroundColor: color
 					}}
 				>
 					{color}
