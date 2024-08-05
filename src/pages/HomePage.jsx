@@ -5,6 +5,7 @@ import Gallery from '../components/Gallery';
 
 // Images
 import introImageHomePage from '../assets/images/hero-1.jpg';
+import fashionTwo from '../assets/images/hero-2.jpg';
 
 const HomePage = () => {
 	return (
@@ -17,7 +18,14 @@ const HomePage = () => {
 							selection"
 				buttonText="Shop Now"
 			/>
-			<HeroSection />
+			<HeroSection
+				image={fashionTwo}
+				title="Elevate Your Style With Exclusive Collections"
+				description="Discover the latest trends in fashion and enjoy personalized
+							recommendations tailored to your style. Shop now and experience
+							luxury at its finest."
+				btnText="Explore Now"
+			/>
 			<Collections />
 			<Gallery />
 		</>

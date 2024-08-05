@@ -1,7 +1,24 @@
 // import fashionOne from '../assets/svg/fashion-1.svg';
-import fashionTwo from '../assets/images/hero-2.jpg';
 
-const HeroSection = () => {
+// Prop Types
+import PropTypes from 'prop-types';
+
+/**
+ * HeroSection component renders a hero section with an optional description and additional content.
+ *
+ * @param {string} title - The title of the hero section.
+ * @param {string} description - The description text of the hero section.
+ * @param {string} image - The URL of the image to be displayed.
+ * @param {React.Node} additionalContent - Any additional React nodes to be displayed.
+ */
+
+const HeroSection = ({
+	image,
+	title,
+	description,
+	btnText,
+	additionalContent
+}) => {
 	return (
 		<>
 			<div className="hero min-h-screen w-full">
@@ -11,28 +28,38 @@ const HeroSection = () => {
 								px-4 sm:px-8 lg:px-16"
 				>
 					<img
-						src={fashionTwo}
+						src={image}
 						className="max-w-full sm:max-w-sm rounded-lg shadow-2xl
 									mb-6"
 						alt="Fashion"
 					/>
-					<div className="text-center sm:ml-8 lg:ml-16">
-						<h1 className="text-5xl font-robotoMono font-bold mb-3">
-							Elevate Your Style With Exclusive Collections
-						</h1>
-						<p className="py-6 font-teko">
-							Discover the latest trends in fashion and enjoy personalized
-							recommendations tailored to your style. Shop now and experience
-							luxury at its finest.
-						</p>
-						<button className="btn btn-primary rounded-none">
-							Explore Now
-						</button>
+					<div className="text-left sm:ml-8 lg:ml-16">
+						<h1 className="text-5xl font-robotoMono font-bold mb-3">{title}</h1>
+						{description && <p className="py-6 font-teko">{description}</p>}
+						{additionalContent}
+						{btnText && (
+							<button className="btn btn-primary rounded-none">
+								{btnText}
+							</button>
+						)}
 					</div>
 				</div>
 			</div>
 		</>
 	);
+};
+
+HeroSection.PropTypes = {
+	title: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
+	image: PropTypes.string.isRequired,
+	btnText: PropTypes.string,
+	additionalContent: PropTypes.node
+};
+
+HeroSection.defaultProps = {
+	additionalContent: null,
+	btnText: null
 };
 
 export default HeroSection;
