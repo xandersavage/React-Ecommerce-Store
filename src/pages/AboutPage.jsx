@@ -17,17 +17,17 @@ import { FaCheckCircle } from 'react-icons/fa';
 const AboutPage = () => {
 	const aboutContent = (
 		<ul className="list-none space-y-2">
-			<li className="flex items-center">
+			<li className="flex items-start">
 				<FaCheckCircle className="text-secondary-content text-2xl mr-2" />
 				<p>Expert insights and market analysis to guide your investments.</p>
 			</li>
-			<li className="flex items-center">
+			<li className="flex items-start">
 				<FaCheckCircle className="text-secondary-content text-2xl mr-2" />
 				<p>
 					Comprehensive risk management strategies to safeguard your assets.
 				</p>
 			</li>
-			<li className="flex items-center">
+			<li className="flex items-start">
 				<FaCheckCircle className="text-secondary-content text-2xl mr-2" />
 				<p>User-friendly platform designed for traders of all levels.</p>
 			</li>
