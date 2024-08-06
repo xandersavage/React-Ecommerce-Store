@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/navigation';
+// import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/effect-coverflow';
+import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
 
 // Images
 import carouselOne from '../assets/images/hero-1.jpg';
@@ -36,11 +37,19 @@ const Carousel = () => {
 			<div className="container">
 				<h2 className="text-4xl font-bold text-center mb-6">Why Choose Us</h2>
 				<Swiper
-					modules={[Navigation, Pagination]}
+					modules={[Autoplay, Pagination, EffectCoverflow]}
 					spaceBetween={50}
 					slidesPerView={1}
-					navigation
-					pagination={{ clickable: true }}
+					pagination={{ clickable: true, dynamicBullets: true }}
+					className="mySwiper"
+					effect="coverflow"
+					coverflowEffect={{
+						rotate: 50,
+						stretch: 0,
+						depth: 100,
+						modifier: 1,
+						slideShadows: true
+					}}
 					autoplay={{ delay: 3000, disableOnInteraction: false }} // Ensure autoplay is properly configured
 				>
 					{carouselItems.map((item, index) => (
