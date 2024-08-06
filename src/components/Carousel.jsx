@@ -33,7 +33,7 @@ const Carousel = () => {
 
 	return (
 		<div className="py-12">
-			<div className="container mx-auto">
+			<div className="container">
 				<h2 className="text-4xl font-bold text-center mb-6">Why Choose Us</h2>
 				<Swiper
 					modules={[Navigation, Pagination]}
@@ -45,13 +45,13 @@ const Carousel = () => {
 				>
 					{carouselItems.map((item, index) => (
 						<SwiperSlide key={index}>
-							<div className="flex flex-col md:flex-row items-center bg-neutral rounded-lg shadow-md">
+							<div className="flex flex-col md:flex-row items-center mx-3 bg-neutral rounded-lg shadow-md">
 								<img
 									src={item.image}
 									alt={item.title}
-									className="w-1/2 md:w-1/2 rounded-lg"
+									className="w-full rounded-lg"
 								/>
-								<div className="md:ml-6  mt-4 md:mt-0 prose">
+								<div className="md:ml-6 text-center mt-4 md:mt-0 prose">
 									<h3 className="text-2xl font-bold">{item.title}</h3>
 									<p className="mt-2">{item.description}</p>
 								</div>
