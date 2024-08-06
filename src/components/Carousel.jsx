@@ -50,7 +50,7 @@ const Carousel = () => {
 						modifier: 1,
 						slideShadows: true
 					}}
-					autoplay={{ delay: 3000, disableOnInteraction: false }} // Ensure autoplay is properly configured
+					autoplay={{ delay: 5000, disableOnInteraction: false }} // Ensure autoplay is properly configured
 				>
 					{carouselItems.map((item, index) => (
 						<SwiperSlide key={index}>
