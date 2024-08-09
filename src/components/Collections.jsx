@@ -49,6 +49,7 @@ const Collections = () => {
 						</div>
 					</div>
 					<div
+						data-aos="zoom-out"
 						className="group shadow-lg overflow-hidden card glass w-auto mx-5
                                     transform transition duration-300 hover:shadow-2xl
                                     hover:scale-105 h-[41.5rem] rounded-none"

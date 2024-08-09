@@ -123,6 +123,7 @@ const CardsGroup = ({ clothing }) => {
 
 							{/* Add to Cart Button */}
 							<button
+								data-aos="shake"
 								onClick={handleAddToCart}
 								className="btn btn-primary w-full flex items-center justify-center gap-2"
 							>

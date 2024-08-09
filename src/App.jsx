@@ -35,8 +35,9 @@ function App() {
 
 	useEffect(() => {
 		AOS.init({
-			duration: 1500, // Duration of animation (in milliseconds)
-			once: true // Whether animation should happen only once - while scrolling down
+			duration: 1650, // Duration of animation (in milliseconds)
+			once: true, // Whether animation should happen only once - while scrolling down
+			delay: 400
 		});
 	}, []);
 

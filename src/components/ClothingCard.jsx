@@ -12,6 +12,7 @@ const ClothingCard = ({
 	return (
 		<>
 			<div
+				data-aos="bounce"
 				className="card glass group rounded-none shadow-xl 
                         relative overflow-hidden cursor-pointer
 						h-96"
@@ -27,7 +28,7 @@ const ClothingCard = ({
 				</figure>
 				<div className="card-body p-1.5 h-1/3">
 					<div className="flex items-center justify-between">
-						<h4 className="card-title underline text-primary text-sm font-robotoMono">
+						<h4 className="card-title underline text-accent-content text-sm font-robotoMono">
 							{name}
 						</h4>
 						{badge && (
@@ -44,7 +45,7 @@ const ClothingCard = ({
 					>
 						{color}
 					</div>
-					<p className="text-2xl font-teko">${price}</p>
+					<h4 className="text-xl font-teko">${price}</h4>
 				</div>
 			</div>
 		</>
