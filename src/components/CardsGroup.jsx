@@ -27,6 +27,8 @@ const CardsGroup = ({ clothing }) => {
 
 	const handleAddToCart = () => {
 		toast.success('Item added to cart!');
+		// Close the modal
+		document.getElementById('clothing_modal').close();
 	};
 
 	return (
@@ -51,9 +53,22 @@ const CardsGroup = ({ clothing }) => {
 			{/* Modal */}
 			<dialog
 				id="clothing_modal"
-				className="modal modal-bottom sm:modal-middle"
+				className="modal modal-bottom sm:modal-full sm:modal-middle"
+				style={{
+					height: '100vh', // Full height of the screen
+					maxHeight: '100vh', // Prevent the modal from exceeding the screen height
+					padding: '0' // Remove padding to make full use of the screen space
+				}}
 			>
-				<div className="modal-box">
+				<div
+					className="modal-box"
+					style={{
+						height: '100vh', // Full height of the screen for modal content
+						maxHeight: '100vh', // Ensure content doesn't exceed screen height
+						padding: '1rem', // Adjust padding for content inside the modal
+						overflowY: 'auto' // Enable scrolling if content is too long
+					}}
+				>
 					{selectedItem ? (
 						<>
 							<h3 className="font-bold text-lg">{selectedItem.name}</h3>

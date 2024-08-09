@@ -30,15 +30,28 @@ const HeroSection = ({
 					<img
 						src={image}
 						className="max-w-full sm:max-w-sm rounded-lg shadow-2xl
-									mb-6"
+									mb-6 overflow-hidden"
 						alt="Fashion"
+						data-aos="fade-left"
 					/>
 					<div className="text-left sm:ml-8 lg:ml-16">
-						<h1 className="text-5xl font-robotoMono font-bold mb-3">{title}</h1>
-						{description && <p className="py-6 font-teko">{description}</p>}
+						<h1
+							data-aos="fade-right"
+							className="text-5xl font-robotoMono font-bold mb-3"
+						>
+							{title}
+						</h1>
+						{description && (
+							<p data-aos="fade-left" className="py-6 font-teko">
+								{description}
+							</p>
+						)}
 						{additionalContent}
 						{btnText && (
-							<button className="btn btn-primary rounded-none">
+							<button
+								data-aos="fade-up"
+								className="btn btn-primary rounded-none"
+							>
 								{btnText}
 							</button>
 						)}

@@ -5,6 +5,10 @@ import {
 	createRoutesFromElements,
 	RouterProvider
 } from 'react-router-dom';
+import { useEffect } from 'react';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -29,6 +33,14 @@ function App() {
 			basename: '/React-Ecommerce-Store/'
 		}
 	);
+
+	useEffect(() => {
+		document.body.style.overflowX = 'hidden';
+		AOS.init({
+			duration: 1500, // Duration of animation (in milliseconds)
+			once: true // Whether animation should happen only once - while scrolling down
+		});
+	}, []);
 
 	return <RouterProvider router={router} />;
 }

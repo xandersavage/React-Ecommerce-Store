@@ -11,10 +11,21 @@ const Intro = ({ title, image, description, buttonText }) => {
 				<div className="hero-overlay bg-opacity-60"></div>
 				<div className="hero-content prose mt-auto text-neutral-content text-center">
 					<div className="max-w-md">
-						{title && <h1 className="mb-5 text-5xl font-bold">{title}</h1>}
-						{description && <p className="mb-5">{description}</p>}
+						{title && (
+							<h1 data-aos="fade-up" className="mb-5 text-5xl font-bold">
+								{title}
+							</h1>
+						)}
+						{description && (
+							<p data-aos="fade-right" className="mb-5">
+								{description}
+							</p>
+						)}
 						{buttonText && (
-							<button className="btn btn-primary rounded-none">
+							<button
+								data-aos="fade-down"
+								className="btn btn-primary rounded-none"
+							>
 								{buttonText}
 							</button>
 						)}
