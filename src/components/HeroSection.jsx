@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import fashionOne from '../assets/svg/fashion-1.svg';
 
 // Prop Types

@@ -22,12 +22,12 @@ const Gallery = () => {
 				<h1 data-aos="pulse" className="text-5xl font-bold text-center mb-8">
 					OUR GALLERY
 				</h1>
-				<div
-					data-aos="pulse"
-					className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
-				>
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 					{images.map((image, index) => (
-						<div className="group relative overflow-hidden rounded-lg">
+						<div
+							data-aos="slide-right"
+							className="group relative overflow-hidden rounded-lg"
+						>
 							<img
 								src={image}
 								alt={`Gallery ${index + 1}`}

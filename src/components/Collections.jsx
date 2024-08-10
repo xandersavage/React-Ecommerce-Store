@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import collectionMale from '../assets/images/collection-1.jpg';
 import collectionFemale from '../assets/images/collection-2.jpg';
 
@@ -15,7 +16,7 @@ const Collections = () => {
 				</h1>
 				<div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-12">
 					<div
-						data-aos="zoom-in"
+						data-aos="zoom-in-right"
 						className="group shadow-lg overflow-hidden card glass w-auto mx-5
                                     transform transition duration-300 hover:shadow-2xl
                                     hover:scale-105 rounded-none h-[41.5rem]"
@@ -49,7 +50,7 @@ const Collections = () => {
 						</div>
 					</div>
 					<div
-						data-aos="zoom-out"
+						data-aos="zoom-in-left"
 						className="group shadow-lg overflow-hidden card glass w-auto mx-5
                                     transform transition duration-300 hover:shadow-2xl
                                     hover:scale-105 h-[41.5rem] rounded-none"

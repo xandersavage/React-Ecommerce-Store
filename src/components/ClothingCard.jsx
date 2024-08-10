@@ -12,7 +12,7 @@ const ClothingCard = ({
 	return (
 		<>
 			<div
-				data-aos="bounce"
+				data-aos="slide-up"
 				className="card glass group rounded-none shadow-xl 
                         relative overflow-hidden cursor-pointer
 						h-96"

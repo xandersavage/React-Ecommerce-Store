@@ -71,7 +71,9 @@ const CardsGroup = ({ clothing }) => {
 				>
 					{selectedItem ? (
 						<>
-							<h3 className="font-bold text-lg">{selectedItem.name}</h3>
+							<h3 className="font-bold text-accent-content text-xl">
+								{selectedItem.name}
+							</h3>
 							<figure className="mt-4 mb-4">
 								<img
 									src={selectedItem.image}
