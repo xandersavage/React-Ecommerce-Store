@@ -14,6 +14,8 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import MenStorePage from './pages/MenStorePage';
 import WomenStorePage from './pages/WomenStorePage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 // Layout
 import MainLayout from './layouts/MainLayout';
@@ -21,12 +23,16 @@ import MainLayout from './layouts/MainLayout';
 function App() {
 	const router = createBrowserRouter(
 		createRoutesFromElements(
-			<Route path="/" element={<MainLayout />}>
-				<Route index element={<HomePage />} />
-				<Route path="/about" element={<AboutPage />} />
-				<Route path="/men" element={<MenStorePage category="Men" />} />
-				<Route path="/women" element={<WomenStorePage category="Women" />} />
-			</Route>
+			<>
+				<Route path="/" element={<MainLayout />}>
+					<Route index element={<HomePage />} />
+					<Route path="/about" element={<AboutPage />} />
+					<Route path="/men" element={<MenStorePage category="Men" />} />
+					<Route path="/women" element={<WomenStorePage category="Women" />} />
+				</Route>
+				<Route path="/login" element={<LoginPage />} />
+				<Route path="/register" element={<RegisterPage />} />
+			</>
 		),
 		{
 			basename: '/React-Ecommerce-Store/'

@@ -76,6 +76,14 @@ const NavBar = () => {
 						</li>
 					</ul>
 				</div>
+				<div className="navbar-end pr-2">
+					<NavLink
+						to="/login"
+						className="btn btn-primary rounded-none px-4 py-2"
+					>
+						Login
+					</NavLink>
+				</div>
 			</div>
 		</>
 	);
